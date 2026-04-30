@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Frontend Mentor | Conference ticket generator</title>
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Inconsolata?query=inconsolata">
+</head>
+<body>
+
+  <!-- Form starts -->
+
+  <div class="flex-container">
+    <img src="./assets/images/logo-full.svg" alt="logo" class="logo">
+    <div class="heading">
+      <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <h2>Secure your spot at next year's biggest coding conference.</h2>
+    </div>
+    <form action="" class="form-container">
+      <fieldset>
+        <legend>Upload Avatar</legend>
+        <div class="file-upload-container">
+          <input required class="hidden-file-input" type="file" id="avatar" name="avatar" accept=".jpg, .jpeg, .png">
+          <label class="flex-label" for="avatar">
+            <img src="./assets/images/icon-upload.svg" alt="upload icon" class="upload-icon">
+            <span class="upload-text">Drag and drop or click to upload</span>
+            <div class="optional-buttons" style="display: none;">
+              <button type="button" class="remove-button">Remove Image</button>
+              <button type="button" class="change-button">Change Image</button>
+            </div>
+          </label>
+        </div>
+        <div class="upload-info">
+          <img src="./assets/images/icon-info.svg" alt="Current avatar" class="current-avatar">
+          <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
+        </div>
+      </fieldset>
+      
+      <div class="flex-data-container">
+        <fieldset class="data-fieldset">
+          <label for="fullName" class="label">Full Name</label>
+          <input type="text" id="fullName" placeholder="Your full name" required>
+        </fieldset>
+        <fieldset class="data-fieldset">
+          <label for="email" class="label">Email Address</label>
+          <input type="email" id="email" placeholder="example@email.com" required>
+        </fieldset>
+        <fieldset class="data-fieldset">
+          <label for="github" class="label">GitHub Username</label>
+          <input type="text" id="github" placeholder="@yourusername" pattern="^@\w+$" required>
+        </fieldset>
+        <button type="submit">Generate My Ticket</button>
+      </div>
+    </form>
+    <!-- Form ends -->
+    <!-- Generated tickets starts -->
+    Congrats, <!-- Full Name -->! Your ticket is ready.
+    We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.
+    Coding Conf
+    Jan 31, 2025 / Austin, TX
+    <!-- Generated tickets ends -->
+    
+  </div>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>
